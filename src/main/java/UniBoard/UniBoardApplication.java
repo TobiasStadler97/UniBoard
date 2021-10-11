@@ -10,4 +10,5 @@ public class UniBoardApplication {
 		SpringApplication.run(UniBoardApplication.class, args);
 	}
 
+	// test
 }

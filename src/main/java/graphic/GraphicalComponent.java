@@ -2,8 +2,9 @@ package graphic;
 
 import javax.persistence.*;
 
+@MappedSuperclass
 @Entity
-public class GraphicalComponent {
+public abstract class GraphicalComponent {
     @Id
     @GeneratedValue
     private int id;

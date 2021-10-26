@@ -19,6 +19,9 @@ public class Course {
     @OneToOne
     private CommentArea commentArea;
 
+    public Course() {
+    }
+
     public String getName() {
         return name;
     }

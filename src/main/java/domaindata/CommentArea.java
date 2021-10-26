@@ -17,6 +17,9 @@ public class CommentArea {
     @OneToMany
     private List<Comment> comments;
 
+    public CommentArea() {
+    }
+
     public List<Comment> getComments() {
         return comments;
     }

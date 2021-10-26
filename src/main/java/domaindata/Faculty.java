@@ -12,6 +12,9 @@ public class Faculty {
     @OneToOne
     private CommentArea commentArea;
 
+    public Faculty() {
+    }
+
     public String getName() {
         return name;
     }

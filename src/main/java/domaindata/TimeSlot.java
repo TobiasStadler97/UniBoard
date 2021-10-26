@@ -14,6 +14,9 @@ public class TimeSlot {
     private Time endTime;
     private String dayOfWeek;
 
+    public TimeSlot() {
+    }
+
     public Time getStartTime() {
         return startTime;
     }

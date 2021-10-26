@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Comment {
+
+
     @Id
     @GeneratedValue
     private int id;
@@ -16,6 +18,9 @@ public class Comment {
     private String content;
     @ManyToOne
     private Person commenter;
+
+    public Comment() {
+    }
 
     public String getContent() {
         return content;

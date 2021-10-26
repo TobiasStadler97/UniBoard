@@ -14,6 +14,9 @@ public class Semester {
     @OneToOne
     private CommentArea commentArea;
 
+    public Semester() {
+    }
+
     public int getPeriod() {
         return period;
     }

@@ -1,4 +1,4 @@
-package entity;
+package users;
 
 import javax.persistence.Entity;
 

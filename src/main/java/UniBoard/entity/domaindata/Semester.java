@@ -1,7 +1,7 @@
-package entity.domaindata;
+package UniBoard.entity.domaindata;
 
 import com.sun.istack.NotNull;
-import entity.graphic.SemesterGC;
+import UniBoard.entity.graphic.SemesterGC;
 
 import javax.persistence.*;
 

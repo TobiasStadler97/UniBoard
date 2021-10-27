@@ -1,6 +1,6 @@
-package entity.domaindata;
+package UniBoard.entity.domaindata;
 
-import entity.graphic.FacultyGC;
+import UniBoard.entity.graphic.FacultyGC;
 
 import javax.persistence.*;
 

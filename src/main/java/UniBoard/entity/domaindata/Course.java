@@ -1,7 +1,7 @@
-package entity.domaindata;
+package UniBoard.entity.domaindata;
 
-import entity.graphic.CourseGC;
-import entity.users.Professor;
+import UniBoard.entity.graphic.CourseGC;
+import UniBoard.entity.users.Professor;
 
 import javax.persistence.*;
 import java.util.List;

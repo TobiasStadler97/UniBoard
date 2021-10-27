@@ -1,6 +1,6 @@
-package entity.users;
+package UniBoard.entity.users;
 
-import entity.domaindata.Course;
+import UniBoard.entity.domaindata.Course;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;

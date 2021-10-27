@@ -1,4 +1,4 @@
-package entity.users;
+package UniBoard.entity.users;
 
 import javax.persistence.Entity;
 

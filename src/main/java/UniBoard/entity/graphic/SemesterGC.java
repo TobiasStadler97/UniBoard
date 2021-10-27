@@ -1,6 +1,6 @@
-package entity.graphic;
+package UniBoard.entity.graphic;
 
-import entity.domaindata.Semester;
+import UniBoard.entity.domaindata.Semester;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;

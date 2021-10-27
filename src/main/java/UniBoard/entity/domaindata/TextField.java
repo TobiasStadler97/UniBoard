@@ -1,13 +1,13 @@
-package entity.domaindata;
+package UniBoard.entity.domaindata;
 
 import com.sun.istack.NotNull;
-import entity.users.Person;
+import UniBoard.entity.users.Person;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-@Entity // do you still need entity if you use the mapped superclass inheritance?
+@Entity // do you still need UniBoard.entity if you use the mapped superclass inheritance?
 public abstract class TextField {
     @Id
     @GeneratedValue

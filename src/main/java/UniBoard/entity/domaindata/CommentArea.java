@@ -1,4 +1,4 @@
-package entity.domaindata;
+package UniBoard.entity.domaindata;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,9 +1,9 @@
-package entity.graphic;
+package UniBoard.entity.graphic;
 
 import javax.persistence.*;
 
 @MappedSuperclass
-@Entity // do you still need entity if you use the mapped superclass inheritance?
+@Entity // do you still need UniBoard.entity if you use the mapped superclass inheritance?
 public abstract class GraphicalComponent {
     @Id
     @GeneratedValue

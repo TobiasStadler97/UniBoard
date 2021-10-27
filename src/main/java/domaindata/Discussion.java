@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 public class Discussion extends TextField {
 
-    @OneToMany
+    @OneToMany()
     private List<Comment> comments;
 
     public Discussion() {

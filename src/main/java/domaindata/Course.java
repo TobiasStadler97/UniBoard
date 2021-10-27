@@ -1,5 +1,6 @@
 package domaindata;
 
+import graphic.CourseGC;
 import users.Professor;
 
 import javax.persistence.*;
@@ -18,6 +19,8 @@ public class Course {
     private Professor professor;
     @OneToOne
     private CommentArea commentArea;
+    @OneToOne
+    private CourseGC courseGC;
 
     public Course() {
     }
@@ -60,5 +63,21 @@ public class Course {
 
     public void setCommentArea(CommentArea commentArea) {
         this.commentArea = commentArea;
+    }
+
+    public void setTimeSlots(List<TimeSlot> timeSlots) {
+        this.timeSlots = timeSlots;
+    }
+
+    public CourseGC getCourseGC() {
+        return courseGC;
+    }
+
+    public void setCourseGC(CourseGC courseGC) {
+        this.courseGC = courseGC;
+    }
+
+    public int getId() {
+        return id;
     }
 }

@@ -3,7 +3,7 @@ package users;
 import javax.persistence.*;
 
 @MappedSuperclass
-@Entity
+@Entity // do you still need entity if you use the mapped superclass inheritance?
 public abstract class Person {
 
     String firstName;

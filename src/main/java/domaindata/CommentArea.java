@@ -15,24 +15,27 @@ public class CommentArea {
     private int id;
 
     @OneToMany
-    private List<Comment> comments;
+    private List<Discussion> discussions;
 
     public CommentArea() {
     }
 
-    public List<Comment> getComments() {
-        return comments;
+    public List<Discussion> getDiscussions() {
+        return discussions;
     }
 
-    public Comment getComment(int i) {
-        return comments.get(i);
+    public Discussion getDiscussion(int i) {
+        return discussions.get(i);
     }
 
-    public void addComment(Comment comment) {
-        this.comments.add(comment);
+
+    public void addComment(Discussion discussion) {
+        this.discussions.add(discussion);
     }
 
-    public void removeComment(Comment comment) {
-        this.comments.remove(comment);
+    public void removeComment(Discussion discussion) {
+        this.discussions.remove(discussion);
     }
+
+
 }

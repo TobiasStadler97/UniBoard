@@ -10,37 +10,13 @@ import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
-public class Comment {
+public class Comment extends TextField {
 
 
-    @Id
-    @GeneratedValue
-    private int id;
-
-    @NotNull
-    private String content;
-    @ManyToOne
-    private Person commenter;
-
-    private LocalDateTime created;
 
     public Comment() {
         created = LocalDateTime.now();
     }
 
-    public String getContent() {
-        return content;
-    }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Person getCommenter() {
-        return commenter;
-    }
-
-    public void setCommenter(Person commenter) {
-        this.commenter = commenter;
-    }
 }

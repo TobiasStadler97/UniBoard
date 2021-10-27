@@ -11,8 +11,8 @@ public abstract class Person {
     String uniID; // could be neptun ID but I want to keep it general
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id; // could also use uniID instead of own id
 
 
     public Person() {
@@ -30,5 +30,7 @@ public abstract class Person {
         return uniID;
     }
 
-
+    public int getId() {
+        return id;
+    }
 }

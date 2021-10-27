@@ -14,4 +14,8 @@ public class Professor extends Person {
 
     public Professor() {
     }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
 }

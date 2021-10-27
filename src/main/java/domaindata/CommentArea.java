@@ -28,7 +28,6 @@ public class CommentArea {
         return discussions.get(i);
     }
 
-
     public void addComment(Discussion discussion) {
         this.discussions.add(discussion);
     }

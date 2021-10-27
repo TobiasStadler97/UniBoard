@@ -40,4 +40,8 @@ public class TimeSlot {
     public void setDayOfWeek(String dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
     }
+
+    public int getId() {
+        return id;
+    }
 }

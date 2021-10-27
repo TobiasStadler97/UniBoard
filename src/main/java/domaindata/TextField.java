@@ -43,4 +43,8 @@ public abstract class TextField {
     public void setCreated(LocalDateTime created) {
         this.created = created;
     }
+
+    public int getId() {
+        return id;
+    }
 }

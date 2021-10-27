@@ -34,5 +34,7 @@ public class CommentArea {
         this.discussions.remove(discussion);
     }
 
-
+    public int getId() {
+        return id;
+    }
 }

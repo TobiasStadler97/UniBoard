@@ -1,6 +1,6 @@
-package users;
+package entity.users;
 
-import domaindata.Course;
+import entity.domaindata.Course;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;

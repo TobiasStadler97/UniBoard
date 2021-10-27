@@ -1,7 +1,7 @@
-package domaindata;
+package entity.domaindata;
 
 import com.sun.istack.NotNull;
-import users.Person;
+import entity.users.Person;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

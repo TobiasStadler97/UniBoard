@@ -1,4 +1,4 @@
-package domaindata;
+package entity.domaindata;
 
 import javax.persistence.Entity;
 import java.time.LocalDateTime;

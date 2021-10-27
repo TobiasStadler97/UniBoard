@@ -1,4 +1,4 @@
-package graphic;
+package entity.graphic;
 
 import javax.persistence.*;
 

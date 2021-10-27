@@ -1,7 +1,7 @@
-package domaindata;
+package entity.domaindata;
 
 import com.sun.istack.NotNull;
-import graphic.SemesterGC;
+import entity.graphic.SemesterGC;
 
 import javax.persistence.*;
 

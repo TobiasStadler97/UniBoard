@@ -1,8 +1,7 @@
-package domaindata;
+package entity.domaindata;
 
 import javax.persistence.*;
 import java.sql.Time;
-import java.util.Date;
 
 @Entity
 public class TimeSlot {

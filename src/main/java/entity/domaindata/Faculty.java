@@ -1,6 +1,6 @@
-package domaindata;
+package entity.domaindata;
 
-import graphic.FacultyGC;
+import entity.graphic.FacultyGC;
 
 import javax.persistence.*;
 

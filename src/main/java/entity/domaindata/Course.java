@@ -1,7 +1,7 @@
-package domaindata;
+package entity.domaindata;
 
-import graphic.CourseGC;
-import users.Professor;
+import entity.graphic.CourseGC;
+import entity.users.Professor;
 
 import javax.persistence.*;
 import java.util.List;

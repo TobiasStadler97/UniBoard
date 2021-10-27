@@ -1,6 +1,6 @@
-package graphic;
+package entity.graphic;
 
-import domaindata.Course;
+import entity.domaindata.Course;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;

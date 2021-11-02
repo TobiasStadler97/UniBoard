@@ -5,16 +5,17 @@ import javax.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class GraphicalComponent {
+
     @Id
     @GeneratedValue
     private int id;
 
     private int positionX;
     private int positionY;
-    private int order;
+    private int orderNr;
 
-    @OneToOne
-    private GraphicalComponent parent;
+    //@OneToOne
+    //private GraphicalComponent parent; // why is this attribute here
 
     public int getPositionX() {
         return positionX;
@@ -32,12 +33,12 @@ public abstract class GraphicalComponent {
         this.positionY = positionY;
     }
 
-    public int getOrder() {
-        return order;
+    public int getOrderNr() {
+        return orderNr;
     }
 
-    public void setOrder(int order) {
-        this.order = order;
+    public void setOrderNr(int order) {
+        this.orderNr = order;
     }
 
     public int getId() {

@@ -8,4 +8,6 @@ import javax.persistence.criteria.CriteriaBuilder;
 
 @Repository
 public interface TutorRepository extends JpaRepository<Tutor, Integer> {
+
+
 }

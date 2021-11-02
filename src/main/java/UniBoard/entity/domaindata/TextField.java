@@ -6,8 +6,8 @@ import UniBoard.entity.users.Person;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@MappedSuperclass
-@Entity // do you still need UniBoard.entity if you use the mapped superclass inheritance?
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class TextField {
     @Id
     @GeneratedValue

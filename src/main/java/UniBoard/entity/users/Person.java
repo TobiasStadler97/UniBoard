@@ -2,8 +2,8 @@ package UniBoard.entity.users;
 
 import javax.persistence.*;
 
-@MappedSuperclass
-@Entity // do you still need UniBoard.entity if you use the mapped superclass inheritance?
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Person {
 
     String firstName;
@@ -12,7 +12,7 @@ public abstract class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; // could also use uniID instead of own id
+    private int id;
 
 
     public Person() {

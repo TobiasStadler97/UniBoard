@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="UniBoard" target="16" />
+      <module name="UniBoard" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

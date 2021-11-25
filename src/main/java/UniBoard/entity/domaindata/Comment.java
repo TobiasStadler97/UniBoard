@@ -16,10 +16,9 @@ public class Comment{
     private String content;
     @ManyToOne
     private Person issuer;
+    private LocalDateTime date_created;
     @OneToOne
     private Discussion discussion_id;
-
-    private LocalDateTime date_created;
 
     public Comment() {
         date_created = LocalDateTime.now();

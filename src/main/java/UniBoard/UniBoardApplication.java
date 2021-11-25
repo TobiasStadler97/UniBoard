@@ -26,12 +26,6 @@ public class UniBoardApplication {
     @Autowired
     PersonService personService;
 
-    @Autowired
-    SemesterService semesterService;
-
-    @Autowired
-    TimeSlotService timeSlotService;
-
     public static void main(String[] args) {
         SpringApplication.run(UniBoardApplication.class, args);
 
@@ -45,16 +39,12 @@ public class UniBoardApplication {
         Course course = new Course();
         Discussion discussion = new Discussion();
         Faculty faculty = new Faculty();
-        Semester semester = new Semester();
-        TimeSlot timeSlot = new TimeSlot();
 
         // make classes persistent
         commentService.save(comment);
         courseService.save(course);
         discussionService.save(discussion);
         facultyService.save(faculty);
-        semesterService.save(semester);
-        timeSlotService.save(timeSlot);
 
     }
 

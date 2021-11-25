@@ -3,7 +3,7 @@ package UniBoard.entity.users;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@MappedSuperclass
 public abstract class Person {
 
     String firstName;

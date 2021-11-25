@@ -1,7 +1,5 @@
 package UniBoard.entity.domaindata;
 
-import UniBoard.entity.users.Professor;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -19,8 +17,7 @@ public class Course {
     private String name;
     @OneToMany
     private List<TimeSlot> timeSlots;
-    @ManyToOne
-    private Professor professor;
+
 
 
 
@@ -50,14 +47,6 @@ public class Course {
 
     public void removeTimeSlot(TimeSlot timeSlot) {
         this.timeSlots.remove(timeSlot);
-    }
-
-    public Professor getProfessor() {
-        return professor;
-    }
-
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
     }
 
     public void setTimeSlots(List<TimeSlot> timeSlots) {

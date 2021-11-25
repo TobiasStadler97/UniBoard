@@ -1,7 +1,6 @@
 package UniBoard;
 
 import UniBoard.entity.domaindata.*;
-import UniBoard.entity.users.Professor;
 import UniBoard.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -28,13 +27,7 @@ public class UniBoardApplication {
     PersonService personService;
 
     @Autowired
-    ProfessorService professorService;
-
-    @Autowired
     SemesterService semesterService;
-
-    @Autowired
-    StudentService studentService;
 
     @Autowired
     TimeSlotService timeSlotService;
@@ -48,8 +41,6 @@ public class UniBoardApplication {
     public void execCodeAfterStartup(){
 
         // declare and init classes
-        Professor professor = new Professor();
-
         Comment comment = new Comment();
         Course course = new Course();
         Discussion discussion = new Discussion();
@@ -58,7 +49,6 @@ public class UniBoardApplication {
         TimeSlot timeSlot = new TimeSlot();
 
         // make classes persistent
-        personService.save(professor);
         commentService.save(comment);
         courseService.save(course);
         discussionService.save(discussion);

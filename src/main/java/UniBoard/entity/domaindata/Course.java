@@ -8,6 +8,11 @@ import java.util.List;
 
 @Entity
 public class Course {
+
+    /*
+    discussion_array
+     */
+
     @Id
     @GeneratedValue
     private int id;

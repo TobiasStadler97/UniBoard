@@ -8,6 +8,14 @@ import java.util.List;
 @Entity
 public class Discussion extends TextField {
 
+    /*
+    course
+    comment_array
+    date_created
+    issuer
+    title
+     */
+
     @OneToMany()
     private List<Comment> comments;
 

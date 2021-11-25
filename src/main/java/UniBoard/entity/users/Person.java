@@ -13,6 +13,8 @@ public abstract class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    // faculty
+    // password
 
 
     public Person() {

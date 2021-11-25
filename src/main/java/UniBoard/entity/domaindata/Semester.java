@@ -7,6 +7,9 @@ import javax.persistence.*;
 
 @Entity
 public class Semester {
+    /*
+    not needed for prototype
+     */
     @Id
     @GeneratedValue
     private int id;

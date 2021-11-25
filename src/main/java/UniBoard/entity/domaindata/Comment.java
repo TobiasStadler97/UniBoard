@@ -3,37 +3,26 @@ package UniBoard.entity.domaindata;
 import UniBoard.entity.users.Person;
 import com.sun.istack.NotNull;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 public class Comment{
 
-    /*
-    content
-    date
-    id
-    issuer
-    discussion_id
-     */
-
     @Id
     @GeneratedValue
     private int id;
-
     @NotNull
     private String content;
-
     @ManyToOne
-    private Person commenter;
+    private Person issuer;
+    @OneToOne
+    private Discussion discussion_id;
 
-    private LocalDateTime created;
+    private LocalDateTime date_created;
 
     public Comment() {
-        created = LocalDateTime.now();
+        date_created = LocalDateTime.now();
     }
 
     public String getContent() {
@@ -44,20 +33,28 @@ public class Comment{
         this.content = content;
     }
 
-    public Person getCommenter() {
-        return commenter;
+    public Person getIssuer() {
+        return issuer;
     }
 
-    public void setCommenter(Person commenter) {
-        this.commenter = commenter;
+    public void setIssuer(Person issuer) {
+        this.issuer = issuer;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
+    public Discussion getDiscussion_id() {
+        return discussion_id;
     }
 
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
+    public void setDiscussion_id(Discussion discussion_id) {
+        this.discussion_id = discussion_id;
+    }
+
+    public LocalDateTime getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(LocalDateTime date_created) {
+        this.date_created = date_created;
     }
 
     public int getId() {

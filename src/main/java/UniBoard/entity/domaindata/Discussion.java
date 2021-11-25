@@ -10,34 +10,21 @@ import java.util.List;
 @Entity
 public class Discussion{
 
-    /*
-    course
-    comment_array
-    date_created
-    issuer
-    title
-     */
-
     @Id
     @GeneratedValue
     private int id;
-
     @NotNull
     private String title;
     @ManyToOne
-    private Person commenter;
-
-    private LocalDateTime created;
-
+    private Person issuer;
+    private LocalDateTime date_created;
+    @OneToOne
+    private Course course;
     @OneToMany()
-    private List<Comment> comments;
+    private List<Comment> comment_list;
 
     public Discussion() {
-        created = LocalDateTime.now();
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        date_created = LocalDateTime.now();
     }
 
     public String getTitle() {
@@ -48,24 +35,36 @@ public class Discussion{
         this.title = title;
     }
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
+    public Person getIssuer() {
+        return issuer;
     }
 
-    public Person getCommenter() {
-        return commenter;
+    public void setIssuer(Person issuer) {
+        this.issuer = issuer;
     }
 
-    public void setCommenter(Person commenter) {
-        this.commenter = commenter;
+    public LocalDateTime getDate_created() {
+        return date_created;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
+    public void setDate_created(LocalDateTime date_created) {
+        this.date_created = date_created;
     }
 
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
+    public List<Comment> getComment_list() {
+        return comment_list;
+    }
+
+    public void setComment_list(List<Comment> comment_list) {
+        this.comment_list = comment_list;
     }
 
     public int getId() {

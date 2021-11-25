@@ -1,7 +1,5 @@
 package UniBoard.entity.domaindata;
 
-import UniBoard.entity.graphic.FacultyGC;
-
 import javax.persistence.*;
 
 @Entity
@@ -20,11 +18,6 @@ public class Faculty {
 
     private String name;
 
-    @OneToOne
-    private CommentArea commentArea;
-
-    @OneToOne
-    private FacultyGC facultyGC;
 
     public Faculty() {
     }
@@ -37,21 +30,6 @@ public class Faculty {
         this.name = name;
     }
 
-    public CommentArea getCommentArea() {
-        return commentArea;
-    }
-
-    public void setCommentArea(CommentArea commentArea) {
-        this.commentArea = commentArea;
-    }
-
-    public FacultyGC getFacultyGC() {
-        return facultyGC;
-    }
-
-    public void setFacultyGC(FacultyGC facultyGC) {
-        this.facultyGC = facultyGC;
-    }
 
     public int getId() {
         return id;

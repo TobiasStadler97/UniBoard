@@ -1,6 +1,5 @@
 package UniBoard.entity.domaindata;
 
-import UniBoard.entity.graphic.CourseGC;
 import UniBoard.entity.users.Professor;
 
 import javax.persistence.*;
@@ -22,10 +21,9 @@ public class Course {
     private List<TimeSlot> timeSlots;
     @ManyToOne
     private Professor professor;
-    @OneToOne
-    private CommentArea commentArea;
-    @OneToOne
-    private CourseGC courseGC;
+
+
+
 
     public Course() {
     }
@@ -62,25 +60,10 @@ public class Course {
         this.professor = professor;
     }
 
-    public CommentArea getCommentArea() {
-        return commentArea;
-    }
-
-    public void setCommentArea(CommentArea commentArea) {
-        this.commentArea = commentArea;
-    }
-
     public void setTimeSlots(List<TimeSlot> timeSlots) {
         this.timeSlots = timeSlots;
     }
 
-    public CourseGC getCourseGC() {
-        return courseGC;
-    }
-
-    public void setCourseGC(CourseGC courseGC) {
-        this.courseGC = courseGC;
-    }
 
     public int getId() {
         return id;

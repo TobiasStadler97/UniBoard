@@ -1,12 +1,14 @@
 package UniBoard.entity.domaindata;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import UniBoard.entity.users.Person;
+import com.sun.istack.NotNull;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-public class Discussion extends TextField {
+public class Discussion{
 
     /*
     course
@@ -16,6 +18,17 @@ public class Discussion extends TextField {
     title
      */
 
+    @Id
+    @GeneratedValue
+    private int id;
+
+    @NotNull
+    private String title;
+    @ManyToOne
+    private Person commenter;
+
+    private LocalDateTime created;
+
     @OneToMany()
     private List<Comment> comments;
 
@@ -23,11 +36,40 @@ public class Discussion extends TextField {
         created = LocalDateTime.now();
     }
 
-    public List<Comment> getComments() {
-        return comments;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Comment getComment(int i) {
-        return comments.get(i);
+    public String getTitle() {
+        return title;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public Person getCommenter() {
+        return commenter;
+    }
+
+    public void setCommenter(Person commenter) {
+        this.commenter = commenter;
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
+
+    public int getId() {
+        return id;
+    }
+
 }

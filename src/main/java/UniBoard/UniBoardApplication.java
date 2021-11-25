@@ -1,9 +1,6 @@
 package UniBoard;
 
 import UniBoard.entity.domaindata.*;
-import UniBoard.entity.graphic.CourseGC;
-import UniBoard.entity.graphic.FacultyGC;
-import UniBoard.entity.graphic.SemesterGC;
 import UniBoard.entity.users.Admin;
 import UniBoard.entity.users.Professor;
 import UniBoard.entity.users.Tutor;
@@ -21,13 +18,7 @@ public class UniBoardApplication {
     AdminService adminService;
 
     @Autowired
-    CommentAreaService commentAreaService;
-
-    @Autowired
     CommentService commentService;
-
-    @Autowired
-    CourseGCService courseGCService;
 
     @Autowired
     CourseService courseService;
@@ -36,13 +27,7 @@ public class UniBoardApplication {
     DiscussionService discussionService;
 
     @Autowired
-    FacultyGCService facultyGCService;
-
-    @Autowired
     FacultyService facultyService;
-
-    @Autowired
-    GraphicalComponentService graphicalComponentService;
 
     @Autowired
     PersonService personService;
@@ -51,16 +36,10 @@ public class UniBoardApplication {
     ProfessorService professorService;
 
     @Autowired
-    SemesterGCService semesterGCService;
-
-    @Autowired
     SemesterService semesterService;
 
     @Autowired
     StudentService studentService;
-
-    @Autowired
-    TextFieldService textFieldService;
 
     @Autowired
     TimeSlotService timeSlotService;
@@ -81,12 +60,7 @@ public class UniBoardApplication {
         Professor professor = new Professor();
         Tutor tutor = new Tutor();
 
-        CourseGC courseGC = new CourseGC();
-        FacultyGC facultyGC = new FacultyGC();
-        SemesterGC semesterGC = new SemesterGC();
-
         Comment comment = new Comment();
-        CommentArea commentArea = new CommentArea();
         Course course = new Course();
         Discussion discussion = new Discussion();
         Faculty faculty = new Faculty();
@@ -97,11 +71,7 @@ public class UniBoardApplication {
         adminService.save(admin);
         personService.save(professor);
         tutorService.save(tutor);
-        courseGCService.save(courseGC);
-        facultyGCService.save(facultyGC);
-        semesterGCService.save(semesterGC);
         commentService.save(comment);
-        commentAreaService.save(commentArea);
         courseService.save(course);
         discussionService.save(discussion);
         facultyService.save(faculty);

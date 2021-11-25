@@ -1,7 +1,6 @@
 package UniBoard.entity.domaindata;
 
 import com.sun.istack.NotNull;
-import UniBoard.entity.graphic.SemesterGC;
 
 import javax.persistence.*;
 
@@ -18,12 +17,6 @@ public class Semester {
     private int period;
     @NotNull
     private int year;
-
-    @OneToOne
-    private SemesterGC semesterGC;
-
-    @OneToOne
-    private CommentArea commentArea;
 
     public Semester() {
     }
@@ -48,19 +41,6 @@ public class Semester {
         return id;
     }
 
-    public SemesterGC getSemesterGC() {
-        return semesterGC;
-    }
 
-    public CommentArea getCommentArea() {
-        return commentArea;
-    }
 
-    public void setSemesterGC(SemesterGC semesterGC) {
-        this.semesterGC = semesterGC;
-    }
-
-    public void setCommentArea(CommentArea commentArea) {
-        this.commentArea = commentArea;
-    }
 }

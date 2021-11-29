@@ -3,6 +3,7 @@ package UniBoard.entity.domaindata;
 import org.springframework.hateoas.Link;
 
 import javax.persistence.*;
+import java.util.LinkedList;
 import java.util.List;
 
 @Entity
@@ -21,6 +22,7 @@ public class Course {
     private List<Discussion> discussions_list;
     //private String[] links_list;
     public Course() {
+        discussions_list = new LinkedList<>();
     }
 
     public String getName() {

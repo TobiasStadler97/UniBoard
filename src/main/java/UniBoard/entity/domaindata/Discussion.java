@@ -5,6 +5,7 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.LinkedList;
 import java.util.List;
 
 @Entity
@@ -25,6 +26,7 @@ public class Discussion{
 
     public Discussion() {
         date_created = LocalDateTime.now();
+        comment_list = new LinkedList<>();
     }
 
     public String getTitle() {

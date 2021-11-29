@@ -48,6 +48,8 @@ public class UniBoardApplication {
         comment.setContent("this is some content");
         comment.setIssuer(user);
         course.setName("UniBoard_Testing");
+        course.addDiscusison(discussion);
+        discussion.addComment(comment);
 
 
         // make classes persistent
@@ -59,5 +61,4 @@ public class UniBoardApplication {
 
     }
 
-    // test
 }

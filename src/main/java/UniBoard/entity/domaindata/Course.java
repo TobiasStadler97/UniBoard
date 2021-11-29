@@ -34,4 +34,13 @@ public class Course {
     public int getId() {
         return id;
     }
+
+    public void addDiscusison(Discussion discussion){
+        discussions_list.add(discussion);
+    }
+
+    public void removeDiscussion(Discussion discussion){
+        discussions_list.remove(discussion);
+    }
+
 }

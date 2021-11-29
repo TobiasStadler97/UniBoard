@@ -1,6 +1,7 @@
 package UniBoard;
 
 import UniBoard.entity.domaindata.*;
+import UniBoard.entity.users.User;
 import UniBoard.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -23,6 +24,9 @@ public class UniBoardApplication {
     @Autowired
     FacultyService facultyService;
 
+    @Autowired
+    UserService userService;
+
 
 
     public static void main(String[] args) {
@@ -38,12 +42,20 @@ public class UniBoardApplication {
         Course course = new Course();
         Discussion discussion = new Discussion();
         Faculty faculty = new Faculty();
+        User user = new User();
+
+        // set some properties
+        comment.setContent("this is some content");
+        comment.setIssuer(user);
+        course.setName("UniBoard_Testing");
+
 
         // make classes persistent
         commentService.save(comment);
         courseService.save(course);
         discussionService.save(discussion);
         facultyService.save(faculty);
+        userService.save(user);
 
     }
 

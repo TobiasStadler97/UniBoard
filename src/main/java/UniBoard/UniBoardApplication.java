@@ -23,8 +23,7 @@ public class UniBoardApplication {
     @Autowired
     FacultyService facultyService;
 
-    @Autowired
-    PersonService personService;
+
 
     public static void main(String[] args) {
         SpringApplication.run(UniBoardApplication.class, args);

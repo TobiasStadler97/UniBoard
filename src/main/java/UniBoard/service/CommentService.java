@@ -18,6 +18,10 @@ public class CommentService {
     @Autowired
     private CommentRepository commentRepository;
 
+    public List<Comment> getCommentsByDiscussionId(int discussionID){
+        return commentRepository.getCommentsByDiscussionID(discussionID);
+    }
+
     public List<Comment> findAll() {
         return commentRepository.findAll();
     }

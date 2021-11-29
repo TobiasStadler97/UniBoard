@@ -7,6 +7,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,10 @@ import java.util.Optional;
 public class DiscussionService {
     @Autowired
     private DiscussionRepository discussionRepository;
+
+    public List<Discussion> getDiscussionsByCourseID(int course_id){
+        return discussionRepository.getDiscussionsByCourseId(course_id);
+    }
 
     public List<Discussion> findAll() {
         return discussionRepository.findAll();

@@ -71,4 +71,12 @@ public class Discussion{
         return id;
     }
 
+    public void addComment(Comment comment){
+        comment_list.add(comment);
+    }
+
+    public void removeComment(Comment comment){
+        comment_list.remove(comment);
+    }
+
 }

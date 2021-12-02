@@ -1,7 +1,5 @@
 package UniBoard.entity.domaindata;
 
-import org.springframework.hateoas.Link;
-
 import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,7 +16,7 @@ public class Course {
     private int id;
     private String name;
     private String professor; // must be changed into a Professor class at some point
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Discussion> discussions_list;
     //private String[] links_list;
     public Course() {

@@ -1,6 +1,7 @@
 package UniBoard.entity.domaindata;
 
 import UniBoard.entity.users.Person;
+import UniBoard.entity.users.User;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
@@ -14,10 +15,10 @@ public class Comment{
     private int id;
     @NotNull
     private String content;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Person issuer;
     private LocalDateTime date_created;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Discussion discussion_id;
 
     public Comment() {
@@ -36,7 +37,7 @@ public class Comment{
         return issuer;
     }
 
-    public void setIssuer(Person issuer) {
+    public void setIssuer(User issuer) {
         this.issuer = issuer;
     }
 

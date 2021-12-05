@@ -15,7 +15,6 @@ public class Course {
     @GeneratedValue
     private int id;
     private String name;
-    private String professor; // must be changed into a Professor class at some point
     @OneToMany(cascade = CascadeType.ALL)
     private List<Discussion> discussions_list;
     //private String[] links_list;
@@ -35,7 +34,7 @@ public class Course {
         return id;
     }
 
-    public void addDiscusison(Discussion discussion){
+    public void addDiscussion(Discussion discussion){
         discussions_list.add(discussion);
     }
 

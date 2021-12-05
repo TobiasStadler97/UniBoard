@@ -48,7 +48,7 @@ public class UniBoardApplication {
         comment.setContent("this is some content");
         comment.setIssuer(user);
         course.setName("UniBoard_Testing");
-        course.addDiscusison(discussion);
+        course.addDiscussion(discussion);
         discussion.addComment(comment);
 
 

@@ -19,7 +19,7 @@ public class Comment{
     private Person issuer;
     private LocalDateTime date_created;
     @OneToOne(cascade = CascadeType.ALL)
-    private Discussion discussion_id;
+    private Discussion discussion;
 
     public Comment() {
         date_created = LocalDateTime.now();
@@ -41,12 +41,12 @@ public class Comment{
         this.issuer = issuer;
     }
 
-    public Discussion getDiscussion_id() {
-        return discussion_id;
+    public Discussion getDiscussion() {
+        return discussion;
     }
 
-    public void setDiscussion_id(Discussion discussion_id) {
-        this.discussion_id = discussion_id;
+    public void setDiscussion(Discussion discussion) {
+        this.discussion = discussion;
     }
 
     public LocalDateTime getDate_created() {

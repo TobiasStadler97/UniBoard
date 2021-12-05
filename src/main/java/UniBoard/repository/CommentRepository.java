@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface CommentRepository extends JpaRepository<Comment, Integer> {
 
-    @Query("SELECT c FROM Comment c WHERE c.discussion_id = ?1")
+    @Query("SELECT c FROM Comment c WHERE c.discussion.id = ?1")
     List<Comment> getCommentsByDiscussionID(int dicsusisonID);
 }

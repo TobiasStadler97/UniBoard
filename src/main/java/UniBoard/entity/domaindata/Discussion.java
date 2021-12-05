@@ -1,6 +1,5 @@
 package UniBoard.entity.domaindata;
 
-import UniBoard.entity.users.Person;
 import UniBoard.entity.users.User;
 import com.sun.istack.NotNull;
 
@@ -18,7 +17,7 @@ public class Discussion{
     @NotNull
     private String title;
     @ManyToOne(cascade = CascadeType.ALL)
-    private Person issuer;
+    private User issuer;
     private LocalDateTime date_created;
     @OneToOne(cascade = CascadeType.ALL)
     private Course course;
@@ -38,7 +37,7 @@ public class Discussion{
         this.title = title;
     }
 
-    public Person getIssuer() {
+    public User getIssuer() {
         return issuer;
     }
 

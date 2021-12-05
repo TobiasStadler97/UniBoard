@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   backend:
-    image: uniboard-backend:latest
+    image: leftazs/uniboard-backend:latest
     container_name: backend
     ports:
       - "8080:8080"

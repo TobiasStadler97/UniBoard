@@ -6,13 +6,6 @@ import java.util.List;
 @Entity
 public class Faculty {
 
-    /*
-    faculty instead of facultygc
-    name
-    id
-    course_list
-     */
-
     @Id
     @GeneratedValue
     private int id;
